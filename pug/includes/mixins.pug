@@ -1,0 +1,84 @@
+mixin page_skeleton
+    doctype html
+    html(lang='en')
+        head
+            meta(charset='utf-8')
+            title Vittorio Erba
+            // <meta name="description" content="">
+            // <meta name="author" content="">
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            link(href='https://fonts.googleapis.com/css?family=Comfortaa&display=swap', rel='stylesheet')
+            link(rel='stylesheet', href='./css/tachyons.css')
+            // <link rel="icon" type="image/png" href="../../dist/images/favicon.png">
+            // <main style="">
+            body.bg-white.ph2.ph4-m.ph5-l
+                main(style="font-family: 'Comfortaa';")
+                    // Header
+                    header.pt4.mb2.bb.b--light-silver
+                        +link("./index.html")
+                            small.f1.db.tc.pt2
+                                b.fw6 Vittorio Erba
+                            small.f3.db.tc.pb3.pt2 Ph.D. student in Statistical Mechanics
+                        
+                    .fl.w-100.pb4.tc
+                        
+                        block
+                    
+                    +float_clear
+
+                    // Footer
+                    footer.pv1.pv3-m.ph3.ph5-m.ph6-l.mid-gray.bt.bw1.b--light-gray
+                        p.tc
+                            | Made by Vittorio Erba. 
+                            br
+                            br
+                            | Powered by: 
+                            | Github pages, Tachyons CSS, PugJS templating engine.
+
+mixin float_box
+    .tc.fl.w-100.w-45-l.center.bg-white.pv4.ph2
+        block
+
+mixin float_clear
+    div(style='clear: both;')
+
+mixin link(url)
+    a.b.link.hover-dark-red.dark-blue(href=url)
+        block
+
+mixin notUploadedYet
+    p.f3.green
+        block
+            
+mixin section_start
+    .bt.bw1.b--light-gray.pb4
+        block
+
+mixin section_title
+    h1.f2.tc
+        block
+
+mixin summary
+    p.center.mw7.f3
+        block
+
+mixin banner_element
+    .dt.center.pa4.ma2.ba.br3.b--black-10.w-100
+        block
+
+mixin banner_text
+    .db.dtc-l.w-60-l.center.tl-l.v-mid-l
+        block
+
+mixin banner_img
+    .w-60.w-40-l.db.dtc-l.v-mid-l.pl4-l.center
+        block
+
+mixin table_line
+    td.db.dtc-m.dtc-l.pv3.ph2.bb.b--black-20
+        block
+
+mixin table_separator
+    tr.dn-m.dn-l
+        td.bt
+

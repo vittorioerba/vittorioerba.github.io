@@ -1,0 +1,183 @@
+include includes/mixins.pug
+include includes/data.pug
+
++page_skeleton
+
+    // ---------------------------------------------------------------------------------------------------------------------
+    // About me
+    // ---------------------------------------------------------------------------------------------------------------------
+    
+    .fl.w-100.pb4.tc
+        +summary
+            | I'm a Ph.D. student in Statistical Mechanics at the University of Milan, where I work under the supervision of 
+            +link('http://pcteserver.mi.infn.it/~caraccio/') Professor Sergio Caracciolo.
+            br
+            br
+            | I'm interested in how Euclidean and non-Euclidean metric structures affect the collective behaviour of large numbers of interacting degrees of freedom, both in low and high dimension and in presence of disorder.
+        .pt3
+            .flex.flex-wrap.justify-around
+                +float_box
+                    h1.f3.black.b
+                        | Education
+                    hr.mw5.bb.bw1.b--black-10
+                    table.f5.w-100.mw8.center(cellspacing='0')
+                        thead
+                            tr
+                                td.pv3.pr3.bb.b--black-20.tr(colspan=4)
+                        
+                        tbody.lh-copy
+                            +table_separator
+                            each item in cv_education 
+                                tr
+                                    +table_line 
+                                        .tc.tr-m.tr-l #{item.date}
+                                    +table_line 
+                                        .tc #{item.what}
+                                    if item.url
+                                        +table_line
+                                            .tc.tl-m.tl-l
+                                                +link(item.url) #{item.where}
+                                    else
+                                        +table_line 
+                                            .tc.tl-m.tl-l #{item.where}
+                                +table_separator
+
+                            tr.dn.dt-row-m.dt-row-l
+                                td.pv3.pr3.bb.b--black-20.tr(colspan='3')
+                                    hr.mw5.bb.b--dotted.bw1.b--black-10
+
+                            +table_separator
+                            each item in cv_schools
+                                tr
+                                    +table_line 
+                                        .tc.tr-m.tr-l #{item.date}
+                                    +table_line 
+                                        .tc #{item.what}
+                                    if item.url
+                                        +table_line
+                                            .tc.tl-m.tl-l 
+                                                +link(item.url) #{item.where}
+                                    else
+                                        +table_line 
+                                            .tc.tl-m.tl-l #{item.where}
+                                +table_separator
+                            // each item in cv_schools
+                            //     tr
+                            //         td.pv3.pr3.bb.b--black-20.tr #{item.date}
+                            //         td.pv3.pr3.bb.b--black-20.tc #{item.what}
+                            //         if item.url
+                            //             td.pv3.pr3.bb.b--black-20.tl 
+                            //                 +link(item.url) #{item.where}
+                            //         else
+                            //             td.pv3.pr3.bb.b--black-20.tl #{item.where}
+                +float_box
+                    h1.f3.black.b
+                        | Work
+                    hr.mw5.bb.bw1.b--black-10
+                    table.f5.w-100.mw8.center(cellspacing='0')
+                        thead
+                            tr
+                                td.pv3.pr3.bb.b--black-20.tr(colspan=4)
+                        tbody.lh-copy
+                            +table_separator
+                            each item in cv_work
+                                tr
+                                    +table_line 
+                                        .tc.tr-m.tr-l #{item.date}
+                                    +table_line 
+                                        .tc #{item.what}
+                                    if item.url
+                                        +table_line
+                                            .tc.tl-m.tl-l
+                                                +link(item.url) #{item.where}
+                                    else
+                                        +table_line 
+                                            .tc.tl-m.tl-l #{item.where}
+                                +table_separator
+                            // each item in cv_work
+                            //     tr
+                            //         td.pv3.pr3.bb.b--black-20.tr #{item.date}
+                            //         td.pv3.pr3.bb.b--black-20.tc #{item.what}
+                            //         if item.url
+                            //             td.pv3.pr3.bb.b--black-20.tl 
+                            //                 +link(item.url) #{item.where}
+                            //         else
+                            //             td.pv3.pr3.bb.b--black-20.tl #{item.where}
+
+            +float_clear
+
+        // ---------------------------------------------------------------------------------------------------------------------
+        // Research projects 
+        // ---------------------------------------------------------------------------------------------------------------------
+
+        +section_start
+            +section_title Research Projects
+            
+            each item in projects
+                -   var page_url = "./"+item.page+".html"
+                +banner_element
+                    +banner_text
+                        +link(page_url)
+                            b.f3 #{item.name}
+                            br
+                            small.f4 #{item.collab}
+                        p.lh-copy.center.f4.black-70 !{item.description}
+                    if item.image 
+                        -   var image_url = "./data/img/"+item.image
+                            +banner_img
+                                img(src=image_url)
+                
+        // ---------------------------------------------------------------------------------------------------------------------
+        // Materials
+        // ---------------------------------------------------------------------------------------------------------------------
+        +section_start
+            .flex.flex-wrap.justify-around
+                +float_box
+                    +section_title Recent publications
+                    p   See all my publications 
+                        +link('./publications.html') here
+                    br
+                    table.f5.w-100.mw8.center(cellspacing='0')
+                        thead
+                            tr
+                                th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white
+                        tbody.lh-copy
+                            each item in publications.slice(0,3)
+                                tr
+                                    td
+                                        .pv3.pr3.bb.b--black-20
+                                            | #{item.authors}
+                                            br
+                                            b #{item.title}
+                                            br
+                                            | #{item.journal}
+                                            br
+                                            +link(item.url) #{item.doi}
+
+                +float_box
+                    +section_title Recent material
+                    p   See all the materials I produced 
+                        +link('./materials.html') here
+                    br
+                    table.f5.w-100.mw8.center(cellspacing='0')
+                        thead
+                            tr
+                                th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                        tbody.lh-copy
+                            +table_separator
+                            each item in materials.slice(0,4)
+                                -   var file_url="./data/"+item.file
+                                tr
+                                    +table_line
+                                        .tc.tr-m.tr-l !{item.date}
+                                    +table_line 
+                                        .tc.tr-m.tr-l !{item.where}
+                                    +table_line 
+                                        .tc.tl-m.tl-l !{item.name}
+                                    +table_line
+                                        .tc.tl-m.tl-l
+                                            +link(file_url)
+                                                b !{item.desc}
+                                +table_separator
+
+            +float_clear
