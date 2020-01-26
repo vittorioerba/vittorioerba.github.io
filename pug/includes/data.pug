@@ -61,32 +61,48 @@
         }
     ]
 
-    projects = {
-        MATC: {
+    projects = [
+        {
+            project: "MATC",
+            active: true,
             name:   "Statistical Physics of Matching Problem",
             collab: "With Sergio Caracciolo and Andrea Sportiello",
             page:   "matching",
             image:  "matching.png",
             description: "The matching problem sits at the intersection of modern computer science, probability theory and disordered system physics being both a close relative of the optimal transport problem and a toy model for spin glasses. <br> We investigate the statistical properties of a random version of the problem with an underlying non-Euclidean metric."
         },
-        DATA: {
+        {
+            project: "DATA",
+            active: true,
             name:   "Theoretical Data Science",
             collab: "With Marco Gherardi and Pietro Rotondo",
             page:   "data_science",
             image:  "",
             description: "Machine learning is a powerful but still not well-understood tool in computer science and data analysis. While a lot of effort has been put into understanding the properties of machine learning architectures, not much has been done to study the intrinsic structure of datasets. <br> We focus on understanding how the mathematical structure underlying datasets and their embeddings affects the outcome of learning tasks."
         },
-        HIGH: {
+        {
+            project: "HIGH",
+            active: true,
             name:   "Concentration Phenomena in High Dimension",
             collab: "With Marco Gherardi and Pietro Rotondo",
             page:   "high_dim",
             image:  "",
             description: "In high dimension, distances between random points tend to concentrate around an average value; this makes extracting information from such points non-trivial. <br> We study such concentration phenomena under the unifying framework of central limit theorems, with applications to geometric network theory."
+        },
+        {
+            project: "FQHE",
+            active: false,
+            name:   "Fractional Quantum Hall Effect and Jack Polynomials",
+            collab: "With Andrea Di Gioacchino, Luca Molinari and Pietro Rotondo",
+            page:   "fqhe",
+            image:  "",
+            description: "Fractional Quantum Hall effect still evades a full microscopic description after 30 years from its discovery. Nonetheless, its groundstate can be effectively described by approximate wavefunctions, such as the celebrated Laughlin anstaz. Recently, all these wavefunctions were recognised to belong to the class of special functions known as Jack polynomials.<br> We study these wavefunctions by exploiting such mathematical connection."
         }
-    }
+    ]
     
     talks = [
         {
+            project:    "DATA",
             date:	"31/10/2019",
             where:	"Complex System Meeting, Milano",
             name:	"Intrinsic dimension estimation for locally undersampled data",
@@ -94,6 +110,7 @@
             file:	"talk-IDE-ComplexSystemsMilan.pdf"
         },
         {
+            project:    "DATA",
             date:	"12/11/2019",
             where:	"Michele Parrinello's group, USI Lugano",
             name:	"Intrinsic dimension estimation for locally undersampled data",
@@ -104,6 +121,7 @@
 
     posters = [
         {
+            project:    "DATA",
             date:	"24/06/2019",
             where:	"XXIV Statistical Physics Meeting, Parma",
             name:	"Intrinsic dimension estimation for locally undersampled data",
@@ -114,6 +132,7 @@
 
     theses = [
         {
+            project:    "MATC",
             date:	"04/10/2018",
             where:	"Supervisor: Sergio Caracciolo <br> Co-Supervisors: Andrea Di Gioacchino & Enrico Malatesta",
             name:	"Random Euclidean Bipartite Matching with concave cost functions in 1d",
@@ -121,6 +140,7 @@
             file:	"MSC-thesis.pdf"
         },
         {
+            project:    "FQHE",
             date:	"20/07/2016",
             where:	"Supervisor: Luca Molinari <br> Co-Supervisor: Pietro Rotondo",
             name:	"Slater decomposition of fractional quantum Hall states",
@@ -166,4 +186,6 @@
 
     materials = [...talks, ...posters, ...theses].sort(datesort)
 
+
 -   function datesort(a,b) { return new Date( b.date.slice(6,10), b.date.slice(3,5), b.date.slice(0,2)) - new Date( a.date.slice(6,10), a.date.slice(3,5), a.date.slice(0,2)); }
+
