@@ -107,7 +107,7 @@
             where:	"XXXI International Conference of Physics Students, Valletta",
             name:	"Slater decomposition of fractional quantum Hall states",
             desc:	"15min talk",
-            file:	"talk-FQHE-ICPS.pdf"
+            url:	"./data/talk-FQHE-ICPS.pdf"
         },
         {
             project:    "DATA",
@@ -115,7 +115,7 @@
             where:	"Complex System Meeting, Milano",
             name:	"Intrinsic dimension estimation for locally undersampled data",
             desc:	"15min talk",
-            file:	"talk-IDE-ComplexSystemsMilan.pdf"
+            url:	"./data/talk-IDE-ComplexSystemsMilan.pdf"
         },
         {
             project:    "DATA",
@@ -123,7 +123,7 @@
             where:	"Michele Parrinello's group, USI Lugano",
             name:	"Intrinsic dimension estimation for locally undersampled data",
             desc:	"30min talk",
-            file:	"talk-IDE-USI.pdf"
+            url:	"./data/talk-IDE-USI.pdf"
         }    
     ]
 
@@ -134,7 +134,7 @@
             where:	"XXIV Statistical Physics Meeting, Parma",
             name:	"Intrinsic dimension estimation for locally undersampled data",
             desc:	"Poster",
-            file:	"poster-IDE-Parma.pdf"
+            url:	"./data/poster-IDE-Parma.pdf"
         }
     ]
 
@@ -145,7 +145,7 @@
             where:	"Supervisor: Sergio Caracciolo <br> Co-Supervisors: Andrea Di Gioacchino & Enrico Malatesta",
             name:	"Random Euclidean Bipartite Matching with concave cost functions in 1d",
             desc:	"M.Sc. thesis",
-            file:	"MSC-thesis.pdf"
+            url:	"./data/MSC-thesis.pdf"
         },
         {
             project:    "FQHE",
@@ -153,7 +153,19 @@
             where:	"Supervisor: Luca Molinari <br> Co-Supervisor: Pietro Rotondo",
             name:	"Slater decomposition of fractional quantum Hall states",
             desc:	"B.Sc. thesis",
-            file:	"BSC-thesis.pdf"
+            url:	"./data/BSC-thesis.pdf"
+        }
+
+    ]
+
+    software = [
+        {
+            project:    "DATA",
+            date:	"15/02/2020",
+            where:	"",
+            name:	"pyFCI: a Full Correlation Integral IDE library in Python 3",
+            desc:	"Software",
+            url:	"https://github.com/vittorioerba/pyFCI"
         }
 
     ]
@@ -200,7 +212,7 @@
         }
     ].sort(datesort)
 
-    materials = [...talks, ...posters, ...theses].sort(datesort)
+    materials = [...talks, ...posters, ...theses, ...software].sort(datesort)
 
 
 -   function datesort(a,b) { return new Date( b.date.slice(6,10), b.date.slice(3,5), b.date.slice(0,2)) - new Date( a.date.slice(6,10), a.date.slice(3,5), a.date.slice(0,2)); }

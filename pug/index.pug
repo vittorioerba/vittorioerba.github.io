@@ -163,17 +163,21 @@ include includes/data.pug
                                         tbody.lh-copy
                                             +table_separator
                                             each item2 in materials.filter(function(e){return e.project == item.project;})
-                                                -   var file_url="./data/"+item2.file
+                                                -   var url=item2.url
                                                 tr
                                                     +table_line
                                                         .tc.tr-m.tr-l !{item2.date}
-                                                    +table_line 
-                                                        .tc.tr-m.tr-l !{item2.where}
-                                                    +table_line 
-                                                        .tc.tl-m.tl-l !{item2.name}
+                                                    - if (item2.where=="")
+                                                        +table_line_2 
+                                                            .tc !{item2.name}
+                                                    - else
+                                                        +table_line 
+                                                            .tc.tr-m.tr-l !{item2.where}
+                                                        +table_line 
+                                                            .tc.tl-m.tl-l !{item2.name}
                                                     +table_line
                                                         .tc.tl-m.tl-l
-                                                            +link(file_url)
+                                                            +link(url)
                                                                 b !{item2.desc}
                                                 +table_separator
                                 -   else
@@ -214,14 +218,18 @@ include includes/data.pug
                         tbody.lh-copy
                             +table_separator
                             each item in materials
-                                -   var file_url="./data/"+item.file
+                                -   var file_url=item.url
                                 tr
                                     +table_line
                                         .tc.tr-m.tr-l !{item.date}
-                                    +table_line 
-                                        .tc.tr-m.tr-l !{item.where}
-                                    +table_line 
-                                        .tc.tl-m.tl-l !{item.name}
+                                    - if (item.where=="")
+                                        +table_line_2 
+                                            .tc !{item.name}
+                                    - else
+                                        +table_line 
+                                            .tc.tr-m.tr-l !{item.where}
+                                        +table_line 
+                                            .tc.tl-m.tl-l !{item.name}
                                     +table_line
                                         .tc.tl-m.tl-l
                                             +link(file_url)
