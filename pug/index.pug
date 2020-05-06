@@ -117,7 +117,8 @@ include includes/data.pug
 
         +section_start
             +section_title
-                | Active Research Projects
+                div(id="activeResearch")
+                    | Active Research Projects
 
             each item in projects.filter(function(e){return e.active})
                 -   var page_url = "./"+item.page+".html"
@@ -188,6 +189,7 @@ include includes/data.pug
         // Materials
         // ---------------------------------------------------------------------------------------------------------------------
         +section_start
+            div(id="materials")
             .flex.flex-wrap.justify-around
                 +float_box
                     +section_title All Publications
@@ -243,7 +245,8 @@ include includes/data.pug
 
         +section_start
             +section_title
-                | Old Research Projects
+                div(id="oldResearch")
+                    | Old Research Projects
 
             each item in projects.filter(function(e){return !e.active})
                 -   var page_url = "./"+item.page+".html"
@@ -309,3 +312,6 @@ include includes/data.pug
                                     | I haven't produced any material yet!
 
                         +float_clear
+
+
+

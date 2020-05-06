@@ -14,26 +14,57 @@ mixin page_skeleton
             body.bg-white.ph2.ph4-m.ph5-l
                 main(style="font-family: 'Comfortaa';")
                     // Header
-                    header.pt4.mb2.bb.b--light-silver
-                        +link("./index.html")
-                            small.f1.db.tc.pt2
-                                b.fw6 Vittorio Erba
-                            small.f3.db.tc.pb3.pt2 Ph.D. student in Statistical Mechanics
+                    header.pt4.mb2
+                            +link("./index.html")
+                                small.f1.db.tc.pt2
+                                    b.fw6 Vittorio Erba
+                                small.f3.db.tc.pb3.pt2 Ph.D. student in Statistical Mechanics
+
+                            nav.pa2.bt.bb.b--light-silver
+
+                                .tc
+                                    +link("./index.html#activeResearch")
+                                        .pa2.dim.f4.mr3.dib-ns.db Active Research
+                                    +link("./index.html#materials")
+                                        .pa2.dim.f4.mr3.dib-ns.db Materials
+                                    +link("./teaching.html")
+                                        .pa2.dim.f4.mr3.dib-ns.db Teaching
+                                    +link("./index.html#oldResearch")
+                                        .pa2.dim.f4.mr3.dib-ns.db Old Research
+                                    +link("#contacts")
+                                        .pa2.dim.f4.mr3.dib-ns.db Contacts
+
                         
-                    .fl.w-100.pb4.tc
+                    .fl.w-100.pb4.tc.f4
                         
                         block
                     
                     +float_clear
 
                     // Footer
-                    footer.pv1.pv3-m.ph3.ph5-m.ph6-l.mid-gray.bt.bw1.b--light-gray
-                        p.tc
+                    footer.pv1.pv3-m.ph3.ph5-m.ph6-l.bt.bw1.b--light-gray
+                        .center.tc
+                            div(id="contacts")
+                            p.b
+                                | Contacts
+
+                            p.mid-gray
+                                | Mail: 
+                                +link("mailto:vittorio.erba@unimi.it")
+                                    | vittorio.erba [at] unimi [dot] it
+                            
+                            p.mid-gray
+                                | Github:  
+                                +link("https://github.com/vittorioerba")
+                                    | https://github.com/vittorioerba
+
+                    footer.pv1.pv3-m.ph3.ph5-m.ph6-l.bt.bw1.b--light-gray
+                        p.tc.mid-gray
                             | Made by Vittorio Erba. 
                             br
                             br
                             | Powered by: 
-                            | Github pages, Tachyons CSS, PugJS templating engine.
+                            | Github pages, Tachyons CSS, PugJS.
 
 mixin float_box
     .tc.fl.w-100.w-45-l.center.bg-white.pv4.ph2
@@ -86,3 +117,6 @@ mixin table_separator
     tr.dn-m.dn-l
         td.bt
 
+mixin lecture_title
+    .center.b.bt.bb.mw7.pt2.pb1.b--light-silver.bw1
+        block

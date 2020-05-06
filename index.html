@@ -13,9 +13,18 @@
     <body class="bg-white ph2 ph4-m ph5-l">
       <main style="font-family: 'Comfortaa';">
         <!-- Header-->
-        <header class="pt4 mb2 bb b--light-silver"><a class="b link hover-dark-red dark-blue" href="./index.html"><small class="f1 db tc pt2"><b class="fw6">Vittorio Erba</b></small><small class="f3 db tc pb3 pt2">Ph.D. student in Statistical Mechanics</small></a>
+        <header class="pt4 mb2"><a class="b link hover-dark-red dark-blue" href="./index.html"><small class="f1 db tc pt2"><b class="fw6">Vittorio Erba</b></small><small class="f3 db tc pb3 pt2">Ph.D. student in Statistical Mechanics</small></a>
+          <nav class="pa2 bt bb b--light-silver">
+            <div class="tc"><a class="b link hover-dark-red dark-blue" href="./index.html#activeResearch">
+                <div class="pa2 dim f4 mr3 dib-ns db">Active Research</div></a><a class="b link hover-dark-red dark-blue" href="./index.html#materials">
+                <div class="pa2 dim f4 mr3 dib-ns db">Materials</div></a><a class="b link hover-dark-red dark-blue" href="./teaching.html">
+                <div class="pa2 dim f4 mr3 dib-ns db">Teaching</div></a><a class="b link hover-dark-red dark-blue" href="./index.html#oldResearch">
+                <div class="pa2 dim f4 mr3 dib-ns db">Old Research</div></a><a class="b link hover-dark-red dark-blue" href="#contacts">
+                <div class="pa2 dim f4 mr3 dib-ns db">Contacts</div></a>
+            </div>
+          </nav>
         </header>
-        <div class="fl w-100 pb4 tc">
+        <div class="fl w-100 pb4 tc f4">
           <!-- ----------------------------------------------------------------------------------------------------------------------->
           <!-- About me-->
           <!-- ----------------------------------------------------------------------------------------------------------------------->
@@ -241,7 +250,8 @@
             <!-- Research projects -->
             <!-- ----------------------------------------------------------------------------------------------------------------------->
             <div class="bt bw1 b--light-gray pb4">
-              <h1 class="f2 tc">Active Research Projects
+              <h1 class="f2 tc">
+                <div id="activeResearch">Active Research Projects</div>
               </h1>
               <div class="dib center pa4 ma2 ba br3 b--black-10 w-100">
                 <div class="db dtc-l w-60-l center v-mid-l"><b class="f3">Statistical Physics of Matching Problem</b><br><small class="f4 black-70">With Sergio Caracciolo and Andrea Sportiello</small>
@@ -434,6 +444,7 @@
             <!-- Materials-->
             <!-- ----------------------------------------------------------------------------------------------------------------------->
             <div class="bt bw1 b--light-gray pb4">
+              <div id="materials"></div>
               <div class="flex flex-wrap justify-around">
                 <div class="tc fl w-100 w-45-l center bg-white pv4 ph2">
                   <h1 class="f2 tc">All Publications
@@ -633,7 +644,8 @@
             <!-- non active Research projects -->
             <!-- ----------------------------------------------------------------------------------------------------------------------->
             <div class="bt bw1 b--light-gray pb4">
-              <h1 class="f2 tc">Old Research Projects
+              <h1 class="f2 tc">
+                <div id="oldResearch">Old Research Projects</div>
               </h1>
               <div class="dib center pa4 ma2 ba br3 b--black-10 w-100">
                 <div class="db dtc-l w-60-l center v-mid-l"><b class="f3">Fractional Quantum Hall Effect and Jack Polynomials</b><br><small class="f4 black-70">With Andrea Di Gioacchino, Luca Molinari and Pietro Rotondo</small>
@@ -715,9 +727,19 @@
         </div>
         <div style="clear: both;"></div>
         <!-- Footer-->
-        <footer class="pv1 pv3-m ph3 ph5-m ph6-l mid-gray bt bw1 b--light-gray">
-          <p class="tc">Made by Vittorio Erba. <br><br>Powered by: 
-            Github pages, Tachyons CSS, PugJS templating engine.
+        <footer class="pv1 pv3-m ph3 ph5-m ph6-l bt bw1 b--light-gray">
+          <div class="center tc">
+            <div id="contacts"></div>
+            <p class="b">Contacts</p>
+            <p class="mid-gray">Mail: <a class="b link hover-dark-red dark-blue" href="mailto:vittorio.erba@unimi.it">vittorio.erba [at] unimi [dot] it</a>
+            </p>
+            <p class="mid-gray">Github:  <a class="b link hover-dark-red dark-blue" href="https://github.com/vittorioerba">https://github.com/vittorioerba</a>
+            </p>
+          </div>
+        </footer>
+        <footer class="pv1 pv3-m ph3 ph5-m ph6-l bt bw1 b--light-gray">
+          <p class="tc mid-gray">Made by Vittorio Erba. <br><br>Powered by: 
+            Github pages, Tachyons CSS, PugJS.
           </p>
         </footer>
       </main>
