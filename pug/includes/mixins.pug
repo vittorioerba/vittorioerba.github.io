@@ -15,24 +15,24 @@ mixin page_skeleton
                 main(style="font-family: 'Comfortaa';")
                     // Header
                     header.pt4.mb2
-                            +link("./index.html")
-                                small.f1.db.tc.pt2
-                                    b.fw6 Vittorio Erba
-                                small.f3.db.tc.pb3.pt2 Ph.D. student in Statistical Mechanics
+                            // +link("./index.html")
+                            small.f1.db.tc.pt2
+                                b.fw6 Vittorio Erba
+                            small.f3.db.tc.pb3.pt2 Ph.D. student in Statistical Mechanics
 
                             nav.pa2.bt.bb.b--light-silver
 
                                 .tc
-                                    +link("./index.html#activeResearch")
-                                        .pa2.dim.f4.mr3.dib-ns.db Active Research
-                                    +link("./index.html#materials")
-                                        .pa2.dim.f4.mr3.dib-ns.db Materials
+                                    +link("./index.html")
+                                        .pa2.dim.f4.mr3.dib-ns.db About
+                                    +link("./research.html")
+                                        .pa2.dim.f4.mr3.dib-ns.db Research
+                                    // +link("./index.html#materials")
+                                    //     .pa2.dim.f4.mr3.dib-ns.db Materials
                                     +link("./teaching.html")
                                         .pa2.dim.f4.mr3.dib-ns.db Teaching
-                                    +link("./index.html#oldResearch")
-                                        .pa2.dim.f4.mr3.dib-ns.db Old Research
-                                    +link("#contacts")
-                                        .pa2.dim.f4.mr3.dib-ns.db Contacts
+                                    // +link("#contacts")
+                                    //     .pa2.dim.f4.mr3.dib-ns.db Contacts
 
                         
                     .fl.w-100.pb4.tc.f4
@@ -47,11 +47,16 @@ mixin page_skeleton
                             div(id="contacts")
                             p.b
                                 | Contacts
-
+                            
                             p.mid-gray
-                                | Mail: 
+                                | Institutional mail: 
                                 +link("mailto:vittorio.erba@unimi.it")
                                     | vittorio.erba [at] unimi [dot] it
+
+                            p.mid-gray
+                                | Personal mail: 
+                                +link("mailto:vittorio.erba@posteo.net")
+                                    | vittorio.erba [at] posteo [dot] net
                             
                             p.mid-gray
                                 | Github:  
@@ -90,7 +95,7 @@ mixin section_title
         block
 
 mixin summary
-    p.center.mw7.f3
+    p.center.mw8.f3
         block
 
 mixin banner_element

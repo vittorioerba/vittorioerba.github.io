@@ -1,0 +1,153 @@
+include includes/mixins.pug
+include includes/data.pug
+
++page_skeleton
+
+        // ---------------------------------------------------------------------------------------------------------------------
+        // Research projects 
+        // ---------------------------------------------------------------------------------------------------------------------
+
+        +section_title
+            div(id="activeResearch")
+                | Active Research Projects
+
+        each item in projects.filter(function(e){return e.active})
+            -   var page_url = "./"+item.page+".html"
+            +banner_element
+                +banner_text
+                    b.f3 #{item.name}
+                    br
+                    small.f4.black-70 #{item.collab}
+                    p.lh-copy.center.f4.black-70 !{item.description}
+
+                    .flex.flex-wrap.justify-around
+                        +float_box
+                            -   if ((publications.filter(function(e){return e.project == item.project;})).length >= 1 )
+                                small.f4.b Relevant publications
+                                br
+                                table.f5.w-100.mw8.center(cellspacing='0')
+                                    thead
+                                        tr
+                                            th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white
+                                    tbody.lh-copy
+                                        each item2 in publications.filter(function(e){return e.project == item.project;})
+                                            tr
+                                                td
+                                                    .pv3.pr3.bb.b--black-20
+                                                        | #{item2.authors}
+                                                        br
+                                                        b #{item2.title}
+                                                        br
+                                                        | #{item2.journal}
+                                                        br
+                                                        +link(item2.url) #{item2.doi}
+                            -   else
+                                | Not published yet, stay tuned!
+
+                        +float_box
+                            -   if ((materials.filter(function(e){return e.project == item.project;})).length >= 1 )
+                                small.f4.b Useful material
+                                br
+                                table.f5.w-100.mw8.center(cellspacing='0')
+                                    thead
+                                        tr
+                                            th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                                    tbody.lh-copy
+                                        +table_separator
+                                        each item2 in materials.filter(function(e){return e.project == item.project;})
+                                            tr
+                                                +table_line
+                                                    .tc.tr-m.tr-l !{item2.date}
+                                                - if (item2.where=="")
+                                                    +table_line_2 
+                                                        .tc !{item2.name}
+                                                - else
+                                                    +table_line 
+                                                        .tc.tr-m.tr-l !{item2.where}
+                                                    +table_line 
+                                                        .tc.tl-m.tl-l !{item2.name}
+                                                +table_line
+                                                    .tc.tl-m.tl-l
+                                                        +link(item2.url)
+                                                            b !{item2.desc}
+                                            +table_separator
+                            -   else
+                                | I haven't produced any material yet!
+
+                    +float_clear
+
+        // ---------------------------------------------------------------------------------------------------------------------
+        // non active Research projects 
+        // ---------------------------------------------------------------------------------------------------------------------
+
+        +section_start
+            +section_title
+                div(id="oldResearch")
+                    | Old Research Projects
+
+            each item in projects.filter(function(e){return !e.active})
+                -   var page_url = "./"+item.page+".html"
+                +banner_element
+                    +banner_text
+                        b.f3 #{item.name}
+                        br
+                        small.f4.black-70 #{item.collab}
+                        p.lh-copy.center.f4.black-70 !{item.description}
+
+                        .flex.flex-wrap.justify-around
+                            +float_box
+                                -   if ((publications.filter(function(e){return e.project == item.project;})).length >= 1 )
+                                    small.f4.b Relevant publications
+                                    br
+                                    table.f5.w-100.mw8.center(cellspacing='0')
+                                        thead
+                                            tr
+                                                th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white
+                                        tbody.lh-copy
+                                            each item2 in publications.filter(function(e){return e.project == item.project;})
+                                                tr
+                                                    td
+                                                        .pv3.pr3.bb.b--black-20
+                                                            | #{item2.authors}
+                                                            br
+                                                            b #{item2.title}
+                                                            br
+                                                            | #{item2.journal}
+                                                            br
+                                                            +link(item2.url) #{item2.doi}
+                                -   else
+                                    | Not published yet, stay tuned!
+
+                            +float_box
+                                -   if ((materials.filter(function(e){return e.project == item.project;})).length >= 1 )
+                                    small.f4.b Useful material
+                                    br
+                                    table.f5.w-100.mw8.center(cellspacing='0')
+                                        thead
+                                            tr
+                                                th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                                        tbody.lh-copy
+                                            +table_separator
+                                            each item2 in materials.filter(function(e){return e.project == item.project;})
+                                                tr
+                                                    +table_line
+                                                        .tc.tr-m.tr-l !{item2.date}
+                                                    - if (item2.where=="")
+                                                        +table_line_2 
+                                                            .tc !{item2.name}
+                                                    - else
+                                                        +table_line 
+                                                            .tc.tr-m.tr-l !{item2.where}
+                                                        +table_line 
+                                                            .tc.tl-m.tl-l !{item2.name}
+                                                    +table_line
+                                                        .tc.tl-m.tl-l
+                                                            +link(item2.url)
+                                                                b !{item2.desc}
+                                                +table_separator
+                                -   else
+                                    | I haven't produced any material yet!
+
+                        +float_clear
+
+

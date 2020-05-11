@@ -96,7 +96,7 @@
             collab: "With Andrea Di Gioacchino, Luca Molinari and Pietro Rotondo",
             page:   "fqhe",
             image:  "",
-            description: "Fractional Quantum Hall effect still evades a full microscopic description after 30 years from its discovery. Nonetheless, its groundstate can be effectively described by approximate wavefunctions, such as the celebrated Laughlin anstaz. Recently, all these wavefunctions were recognised to belong to the class of special functions known as Jack polynomials.<br> We study these wavefunctions by exploiting such mathematical connection."
+            description: "Fractional Quantum Hall effect still evades a full microscopic description after 30 years from its discovery. Nonetheless, its groundstate can be effectively described by approximate wavefunctions, such as the celebrated Laughlin anstaz. Recently, all these wavefunctions were recognised to belong to the class of special functions known as Jack polynomials.<br> We study these model wavefunctions by exploiting the mathematics of symmetric functions."
         }
     ]
     
@@ -221,6 +221,39 @@
 
     materials = [...talks, ...posters, ...theses, ...software].sort(datesort)
 
+    supervised = [
+        {
+            date:       "06/2019 - 04/2020",
+            student:    "Sebastiano Ariosto",
+            type:       "M.Sc. thesis",
+            url:        "",
+            project:    "DATA"
+        },{
+            date:       "10/2019 - 04/2020",
+            student:    "Mirko Rossini",
+            type:       "M.Sc. thesis",
+            url:        "",
+            project:    "DATA"
+        }
+    ]
+
+    tutoring = [
+        {
+            date:       "Spring 2020",
+            course:     "Mathematical methods for physics",
+            url:        "./teaching_metodi2020.html"
+        },{
+
+            date:       "Fall 2019",
+            course:     "Basic math for Natural Sciences",
+            url:        ""
+        },{
+
+            date:       "Spring 2019",
+            course:     "Mathematical methods for physics",
+            url:        ""
+        }
+    ]
 
 -   function datesort(a,b) { return new Date( b.date.slice(6,10), b.date.slice(3,5), b.date.slice(0,2)) - new Date( a.date.slice(6,10), a.date.slice(3,5), a.date.slice(0,2)); }
 
