@@ -25,14 +25,11 @@ include includes/data.pug
                                     +table_line 
 
                                         .tc !{item.student}
-                                   
                                         if item.nowAt
                                             if item.urlAt
                                                 +link(item.urlAt) !{item.nowAt}
                                             else
                                                 | !{item.nowAt}
-                                        else
-                                            |...
 
                                     if item.url
                                         +table_line
