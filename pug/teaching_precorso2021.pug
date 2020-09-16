@@ -11,8 +11,6 @@ include includes/data.pug
         
     p.b Il precorso si svolgerà su Zoom in aula virtuale A dal 21 al 25 settembre, dalle 9.00 alle 12.00.
 
-    p Il programma delle lezioni è dettagliato nei box sottostanti, ma potrebbe cambiare leggermente in corso d'opera.
-
     p Potete contattarmi all'indirizzo 
         +link("mailto:vittorio.erba@unimi.it")
             | vittorio.erba [at] unimi [dot] it 
@@ -20,20 +18,33 @@ include includes/data.pug
 
     p.b Audio, video, chat e pdf delle lezioni saranno disponibili dopo la lezione.
 
+    p.b Risorse utili
+    ul.tl.mh6
+        li il vostro libro di testo della scuola superiore è un ottima risorsa (se non ve ne siete già liberati)
+        li i volumi 4 e 5 della collana di libri di testo open-source per i licei scientifici "Dal problema al modello matematico", reperibili gratuitamente sul sito 
+            +link("https://www.matematicamente.it/manuali-scolastici/") matematicamente.it
+            | , oppure 
+            +link("https://www.matematicamente.it/staticfiles/manuali-cc/carmelo_di_stefano-dal_problema_al_metodo_matematico-volume_2-triennio-2019.pdf") qui (volume 4)
+            |  e 
+            +link("https://www.matematicamente.it/staticfiles/manuali-cc/carmelo_di_stefano-dal_problema_al_metodo_matematico-volume_3-triennio-2019.pdf") qui (volume 5)
+            | .
+        li 
+            +link("https://www.matematika.it/public/esercizi/14/11_12_domini_3_0.pdf") raccolta di esercizi 
+            | sul calcolo del dominio di funzioni reali.
+        li 
+            +link("https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjX1en43e3rAhUYh1wKHWR4DXU4ChAWMAJ6BAgEEAE&url=https%3A%2F%2Fwww.edatlas.it%2Fdocuments%2Fdd26e811-8a41-43b2-9381-17244a45cb1a&usg=AOvVaw3dffWCgIZM_CPAuHoZHM4f") raccolta di esercizi 
+            | sui problemi di ottimizzazione.
+
     .flex.flex-wrap.justify-around
         +float_box
             +lecture_title Lezione 1: Funzioni
 
             p Aula virtuale A, 21/09/2020 9:00-12:00
 
-            p.b Teoria
-            ul
+            ul.tl.mh6
                 li Definizione, dominio, codominio
                 li Iniettività, suriettività e biunivocità
                 li Funzioni reali, monotonia, massimi e minimi
-
-            p.b Esercizi sulle famiglie di funzioni elementari
-            ul
                 li Polinomi e funzioni razionali
                 li Funzioni irrazionali
                 li Esponenziali e logaritmi
@@ -46,16 +57,11 @@ include includes/data.pug
 
             p Aula virtuale A, 22/09/2020 9:00-12:00
 
-            p.b Teoria
-            ul
+            ul.tl.mh6
                 li Motivazione e definizione fisica
                 li Derivate delle funzioni elementari
                 li Regole di derivazione
                 li Derivate e monotonia
-
-            p.b Esercizi
-            ul 
-                li Esempi di calcolo delle derivate
                 li Ottimizzazione di funzioni
 
         +float_box
@@ -63,45 +69,29 @@ include includes/data.pug
 
             p Aula virtuale A, 23/09/2020 9:00-12:00
 
-            p.b Teoria
-            ul 
+            ul.tl.mh6 
                 li Cosa vuol dire studiare una funzione?
-    
-            p.b Esercizi
-            ul 
-                li Studi di funzioni elementari
+                li Esercizi su studi di funzioni
 
         +float_box
             +lecture_title Lezione 4: Integrali
 
             p Aula virtuale A, 24/09/2020 9:00-12:00
 
-            p.b Teoria
-            ul 
+            ul.tl.mh6 
                 li Motivazione e definizione fisica degli integrali definiti
                 li Integrali indefiniti e relazione con gli integrali definiti
                 li Integrali delle funzioni elementari
                 li Regole di integrazione
-
-            p.b Esercizi
-            ul 
-                li Integrali di funzioni elementari
-                li Altri integrali utili
 
         +float_box
             +lecture_title Lezione 5: Vettori
 
             p Aula virtuale A, 25/09/2020 9:00-12:00
 
-            p.b Teoria
-            ul
+            ul.tl.mh6
                 li Definizione di vettore
                 li Versori e componenti cartesiane
                 li Operazioni con i vettori
-
-            p.b Esercizi
-            ul 
-                li Operazioni vettoriali
-                li Componenti cartesiane
 
     +float_clear
