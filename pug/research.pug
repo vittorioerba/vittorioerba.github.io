@@ -10,6 +10,15 @@ include includes/data.pug
         +section_title
             div(id="activeResearch")
                 | Active Research Projects
+        
+        +summary
+            | Here you can find publications and some additional material
+            | related to my research projects.
+            | If you are interested in publications metrics, see my page on 
+            +link("https://academic.microsoft.com/profile/f848263j-i89f-473g-8612-egg8jg82g744/VittorioErba/publication/search?q=Vittorio%20Erba&qe=%2540%2540%2540USER.PUBLICATIONS%253Db848263f-e89b-473c-8612-acc8fc82c744&f=&orderBy=0")
+                |Microsoft academic
+            | .
+        
 
         each item in projects.filter(function(e){return e.active})
             -   var page_url = "./"+item.page+".html"
