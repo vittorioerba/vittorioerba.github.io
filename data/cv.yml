@@ -203,7 +203,7 @@ sections:
         when:     '31/10/2019'
         where:    'Milano (IT)'
         site:
-          url:      'https://vittorioerba.github.io/assets/talk-IDE-USI.pdf'
+          url:      'https://vittorioerba.github.io/assets/talk-IDE-ComplexSystemsMilan.pdf'
           project:    'DATA'
           sortdate:     '31/10/2019'
       
@@ -212,7 +212,7 @@ sections:
         when:     '24/06/2019'
         where:    'Parma (IT)'
         site:
-          url:      'https://vittorioerba.github.io/assets/talk-IDE-USI.pdf'
+          url:      'https://vittorioerba.github.io/assets/poster-IDE-Parma.pdf'
           project:  'DATA'
           sortdate:     '24/06/2019'
   
