@@ -1,4 +1,10 @@
 #!/bin/sh
-
+cd data
+make
+cd ..
 rm ./*.html
-pug -P -o . pug/*.pug
+for file in $(ls -p src | grep -v '^_' | grep -v '/')
+do
+    pug -P -o . src/$file
+done
+

@@ -1,5 +1,4 @@
-include includes/mixins.pug
-include includes/data.pug
+include _mixins.pug
 
 +page_skeleton
 
@@ -27,12 +26,12 @@ include includes/data.pug
                         
                         tbody.lh-copy
                             +table_separator
-                            each item in cv_education 
+                            each item in cv_education
                                 tr
                                     +table_line 
-                                        .tc.tr-m.tr-l #{item.date}
+                                        .tc.tr-m.tr-l #{item.when}
                                     +table_line 
-                                        .tc #{item.what}
+                                        .tc #{item.title}
                                     if item.url
                                         +table_line
                                             .tc.tl-m.tl-l
@@ -50,9 +49,9 @@ include includes/data.pug
                             each item in cv_schools
                                 tr
                                     +table_line 
-                                        .tc.tr-m.tr-l #{item.date}
+                                        .tc.tr-m.tr-l #{item.when}
                                     +table_line 
-                                        .tc #{item.what}
+                                        .tc #{item.title}
                                     if item.url
                                         +table_line
                                             .tc.tl-m.tl-l 
@@ -83,9 +82,9 @@ include includes/data.pug
                             each item in cv_work
                                 tr
                                     +table_line 
-                                        .tc.tr-m.tr-l #{item.date}
+                                        .tc.tr-m.tr-l #{item.when}
                                     +table_line 
-                                        .tc #{item.what}
+                                        .tc #{item.title}
                                     if item.url
                                         +table_line
                                             .tc.tl-m.tl-l
@@ -107,7 +106,7 @@ include includes/data.pug
                     
                     p.center.mt5.f4
                         | See my full CV 
-                        +link("./data/VittorioErba_CV.pdf") here 
+                        +link("./assets/VittorioErba_CV.pdf") here 
 
             +float_clear
 

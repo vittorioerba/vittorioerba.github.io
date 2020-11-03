@@ -1,0 +1,100 @@
+-
+    $for(sections)$
+
+    $if(it.publications)$
+$it.site.id$ = [
+    $for(it.items)$
+{
+        sortdate: "$it.when$",
+        title: "$it.title$",
+        authors: "$it.authors$",
+        journal: "$it.journal$",
+        doi: "$it.doi$",
+        url: "$it.url$"
+    }$sep$, $endfor$
+    ].sort(datesort)
+
+    $elseif(it.skills)$
+
+    $else$
+
+    $it.site.id$ = [
+    $for(it.items)$
+    {
+        title: "$it.title$",
+        subtitle: "$it.subtitle$",
+        $if(it.site.when)$
+when: "$it.site.when$",
+$else$
+when: "$it.when$",
+$endif$
+        sortdate: "$it.site.sortdate$",
+        $if(it.site.where)$
+where: "$it.site.where$",
+$else$
+where: "$it.where$",
+$endif$
+        $if(it.info)$
+url: "$it.site.url$",
+        info: [
+        $for(it.info)$
+        "$it$"$sep$,
+        $endfor$
+        ]
+        $else$
+url: "$it.site.url$"
+        $endif$
+    }$sep$,$endfor$
+    ].sort(datesort)
+
+    $endif$
+    $endfor$
+
+    cv_work = [...work, ...teaching].sort(datesort)
+    materials = [...talks].sort(datesort)
+
+
+    supervised = [
+        {
+            date:       "06/2019 - 04/2020",
+            student:    "Sebastiano Ariosto",
+            type:       "M.Sc. thesis",
+            url:        "./assets/supervisedThesis_SebastianoAriosto.pdf",
+            project:    "DATA",
+            nowAt:      "Now PhD student @ Insubria University"
+        },{
+            date:       "10/2019 - 04/2020",
+            student:    "Mirko Rossini",
+            type:       "M.Sc. thesis",
+            url:        "./assets/supervisedThesis_MirkoRossini.pdf",
+            project:    "DATA",
+            nowAt:      "Now PhD student @ Ulm University",
+            urlAt:      "https://www.uni-ulm.de/en/nawi/institute-for-complex-quantum-systems/welcome/"
+        }
+    ]
+
+    tutoring = [
+        {
+            date:       "Fall 2021",
+            course:     "Numerical treatment of experimental data<br> (OOP and numerical simulations in C++)",
+            url:        "http://labmaster.mi.infn.it/Laboratorio2/labTNDS/"
+        },{
+            date:       "Fall 2021",
+            course:     "Pre-course of mathematics for physicists",
+            url:        "./teaching_precorso2021.html"
+        },{
+            date:       "Spring 2020",
+            course:     "Mathematical methods for physics",
+            url:        "./teaching_metodi2020.html"
+        },{
+
+            date:       "Fall 2019",
+            course:     "Basic math for Natural Sciences",
+            url:        ""
+        },{
+
+            date:       "Spring 2019",
+            course:     "Mathematical methods for physics",
+            url:        "http://wwwteor.mi.infn.it/~molinari/metodi2020.html"
+        }
+    ]
