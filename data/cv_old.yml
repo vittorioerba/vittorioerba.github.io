@@ -49,7 +49,7 @@ sections:
         where:    'Milano (IT)'
         info:
           - 'Supervisor: Sergio Caracciolo'
-          - 'Research topics: Euclidean random combinatorial optimization, Machine learning, Disordered systems'
+          - 'Research topics: Euclidean random combinatorial optimization, Theoretical data science'
           - 'Main collaborators: Sergio Caracciolo, Pietro Rotondo, Andrea Sportiello'
         site:
           url:      'http://phd.fisica.unimi.it'
@@ -110,7 +110,7 @@ sections:
             sortdate: '01/02/2019'
   
       - title:    'Internship in Electronic Structure'
-        subtitle: 'European Synchrotron Radiation Facility'
+        subtitle: 'European Syncrotron Radiation Facility'
         when:     '09/2015'
         where:    'Grenoble (FR)'
         info:
@@ -137,22 +137,6 @@ sections:
       id:           'publications'
     title: 'Publications'
     items:
-      - when:       '2020/11/20'
-        title:      'Self-induced quenched disorder in multimodal cavity quantum electrodynamic'
-        authors:    "Erba, Pastore, Rotondo"
-        journal:    'In preparation'
-        doi:        ''
-        url:        ''
-        project:    ''
-
-      - when:       '2020/11/20'
-        title:      'The number of optimal matchings in the Euclidean assignment problem on the line'
-        authors:    "Caracciolo, Erba*, Sportiello"
-        journal:    'In preparation'
-        doi:        ''
-        url:        ''
-        project:    'MATC'
-
       - when:       '28/10/2020'
         title:      'The p-Airy distribution'
         authors:    "Caracciolo, Erba*, Sportiello"
@@ -219,7 +203,7 @@ sections:
         when:     '31/10/2019'
         where:    'Milano (IT)'
         site:
-          url:      'https://vittorioerba.github.io/assets/talk-IDE-USI.pdf'
+          url:      'https://vittorioerba.github.io/assets/talk-IDE-ComplexSystemsMilan.pdf'
           project:    'DATA'
           sortdate:     '31/10/2019'
       
@@ -228,7 +212,7 @@ sections:
         when:     '24/06/2019'
         where:    'Parma (IT)'
         site:
-          url:      'https://vittorioerba.github.io/assets/talk-IDE-USI.pdf'
+          url:      'https://vittorioerba.github.io/assets/poster-IDE-Parma.pdf'
           project:  'DATA'
           sortdate:     '24/06/2019'
   
@@ -252,7 +236,7 @@ sections:
           where: '\@ UNIMI'
           sortdate: '01/12/2020'
     
-      - title:    'Thesis supervision'
+      - title:    'Thesis superivision'
         subtitle: 'University of Milan'
         when:     'Fall 2019'
         where:    'Milano (IT)'
@@ -382,8 +366,7 @@ sections:
           url:        ''
           sortdate: '01/12/2016'
   
-  - software: true
-    title: 'Software'
+  - title: 'Software'
     site:
       id:           'software'
     items:  
