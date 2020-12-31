@@ -1,0 +1,89 @@
+include includes/mixins.pug
+include includes/data.pug
+    
++page_skeleton 
+    +section_title Materials
+
+    +summary 
+        | Here you can find the material I produced in the last years, from theses work to talk slides and conference posters.
+
+    +section_start
+        +section_title Talks
+        if talks.length > 0
+            table.f5.w-100.mw8.overflow-x.center(cellspacing='0')
+                thead
+                    tr
+                        th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                tbody.lh-copy
+                    +table_separator
+                    each item in talks
+                        -   var file_url="./data/"+item.file
+                        tr
+                            +table_line
+                                .tc.tr-m.tr-l !{item.date}
+                            +table_line 
+                                .tc.tr-m.tr-l !{item.where}
+                            +table_line 
+                                .tc.tl-m.tl-l !{item.name}
+                            +table_line
+                                .tc.tl-m.tl-l
+                                    +link(file_url)
+                                        b !{item.desc}
+                        +table_separator
+        else
+            +notUploadedYet
+                | No slide uploaded yet: stay tuned!
+            
+    +section_start
+        +section_title Posters
+        if posters.length > 0
+            table.f5.w-100.mw8.center(cellspacing='0')
+                thead
+                    tr
+                        th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                tbody.lh-copy
+                    +table_separator
+                    each item in posters
+                        -   var file_url="./data/"+item.file
+                        tr
+                            +table_line
+                                .tc.tr-m.tr-l !{item.date}
+                            +table_line 
+                                .tc.tr-m.tr-l !{item.where}
+                            +table_line 
+                                .tc.tl-m.tl-l !{item.name}
+                            +table_line
+                                .tc.tl-m.tl-l
+                                    +link(file_url)
+                                        b !{item.desc}
+                        +table_separator
+        else
+            +notUploadedYet
+                | No poster uploaded yet: stay tuned!
+            
+    +section_start
+        +section_title Theses
+        if theses.length > 0
+            table.f5.w-100.mw8.center(cellspacing='0')
+                thead
+                    tr
+                        th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                tbody.lh-copy
+                    +table_separator
+                    each item in theses
+                        -   var file_url="./data/"+item.file
+                        tr
+                            +table_line
+                                .tc.tr-m.tr-l !{item.date}
+                            +table_line 
+                                .tc.tr-m.tr-l !{item.where}
+                            +table_line 
+                                .tc.tl-m.tl-l !{item.name}
+                            +table_line
+                                .tc.tl-m.tl-l
+                                    +link(file_url)
+                                        b !{item.desc}
+                        +table_separator
+        else
+            +notUploadedYet
+                | No thesis uploaded yet: stay tuned!

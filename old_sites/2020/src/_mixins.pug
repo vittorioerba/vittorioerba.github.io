@@ -1,0 +1,131 @@
+include ../data/data.pug
+
+    -   function datesort(a,b) { return new Date( b.sortdate.slice(6,10), b.sortdate.slice(3,5), b.sortdate.slice(0,2)) - new Date( a.sortdate.slice(6,10), a.sortdate.slice(3,5), a.sortdate.slice(0,2)); }
+
+mixin page_skeleton
+    doctype html
+    html(lang='en')
+        head
+            meta(charset='utf-8')
+            title Vittorio Erba
+            // <meta name="description" content="">
+            // <meta name="author" content="">
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            link(href='https://fonts.googleapis.com/css?family=Comfortaa&display=swap', rel='stylesheet')
+            link(rel='stylesheet', href='./css/tachyons.css')
+            // <link rel="icon" type="image/png" href="../../dist/images/favicon.png">
+            // <main style="">
+            body.bg-white.ph2.ph4-m.ph5-l
+                main(style="font-family: 'Comfortaa';")
+                    // Header
+                    header.pt4.mb2
+                            // +link("./index.html")
+                            small.f1.db.tc.pt2
+                                b.fw6 Vittorio Erba
+                            small.f3.db.tc.pb3.pt2 Ph.D. student in Statistical Mechanics
+
+                            nav.pa2.bt.bb.b--light-silver
+
+                                .tc
+                                    +link("./index.html")
+                                        .pa2.dim.f4.mr3.dib-ns.db About
+                                    +link("./research.html")
+                                        .pa2.dim.f4.mr3.dib-ns.db Research
+                                    // +link("./index.html#materials")
+                                    //     .pa2.dim.f4.mr3.dib-ns.db Materials
+                                    +link("./teaching.html")
+                                        .pa2.dim.f4.mr3.dib-ns.db Teaching
+                                    // +link("#contacts")
+                                    //     .pa2.dim.f4.mr3.dib-ns.db Contacts
+
+                        
+                    .fl.w-100.pb4.tc.f4
+                        
+                        block
+                    
+                    +float_clear
+
+                    // Footer
+                    footer.pv1.pv3-m.ph3.ph5-m.ph6-l.bt.bw1.b--light-gray
+                        .center.tc
+                            div(id="contacts")
+                            p.b
+                                | Contacts
+                            
+                            p.mid-gray
+                                | Institutional mail: 
+                                +link("mailto:vittorio.erba@unimi.it")
+                                    | vittorio.erba [at] unimi [dot] it
+
+                            p.mid-gray
+                                | Personal mail: 
+                                +link("mailto:vittorio.erba@posteo.net")
+                                    | vittorio.erba [at] posteo [dot] net
+                            
+                            p.mid-gray
+                                | Github:  
+                                +link("https://github.com/vittorioerba")
+                                    | https://github.com/vittorioerba
+
+                    footer.pv1.pv3-m.ph3.ph5-m.ph6-l.bt.bw1.b--light-gray
+                        p.tc.mid-gray
+                            | Made by Vittorio Erba. 
+                            br
+                            br
+                            | Powered by: 
+                            | Github pages, Tachyons CSS, PugJS.
+
+mixin float_box
+    .tc.fl.w-100.w-45-l.center.bg-white.pv4.ph2
+        block
+
+mixin float_clear
+    div(style='clear: both;')
+
+mixin link(url)
+    a.b.link.hover-dark-red.dark-blue(href=url)
+        block
+
+mixin notUploadedYet
+    p.f3.green
+        block
+            
+mixin section_start
+    .bt.bw1.b--light-gray.pb4
+        block
+
+mixin section_title
+    h1.f2.tc
+        block
+
+mixin summary
+    p.center.mw8.f4
+        block
+
+mixin banner_element
+    .dib.center.pa4.ma2.ba.br3.b--black-10.w-100
+        block
+
+mixin banner_text
+    .db.dtc-l.w-60-l.center.v-mid-l
+        block
+
+mixin banner_img
+    .w-60.w-40-l.db.dtc-l.v-mid-l.pl4-l.center
+        block
+
+mixin table_line
+    td.db.dtc-m.dtc-l.pv3.ph2.bb.b--black-20
+        block
+
+mixin table_line_2
+    td.db.dtc-m.dtc-l.pv3.ph2.bb.b--black-20(colspan=2)
+        block
+            
+mixin table_separator
+    tr.dn-m.dn-l
+        td.bt
+
+mixin lecture_title
+    .center.b.bt.bb.mw7.pt2.pb1.b--light-silver.bw1
+        block

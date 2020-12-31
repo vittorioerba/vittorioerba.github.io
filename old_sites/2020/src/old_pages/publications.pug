@@ -1,0 +1,25 @@
+include includes/mixins.pug
+include includes/data.pug
+    
++page_skeleton 
+
+    +section_title Publications
+
+    if publications.length > 0
+        each item in publications
+            +banner_element
+                +banner_text
+                    +link(item.url)
+                        b.f3 #{item.title}
+                        br
+                        small.f4 #{item.authors}
+                        br
+                        small.f4.lh-copy #{item.journal}
+                    p.lh-copy.center.f4.black-70 !{item.description}
+                if item.image 
+                    -   var image_url = "./data/img/"+item.image
+                    +banner_img
+                        img(src=image_url)
+    else
+        +notUploadedYet
+            | No article published yet: stay tuned!

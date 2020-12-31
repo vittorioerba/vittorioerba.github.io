@@ -1,281 +1,190 @@
-include _mixins.pug
+doctype html
+html(lang='en')
 
-+page_skeleton
+    head
+        title Vittorio Erba
 
-    +section_title
-        div(id="metodi1920")
-            | Metodi Matematici per la Fisica 2019/20
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
 
-    p.center
-        | Tutte le informazioni ufficiali si trovano sui siti 
-        +link("https://ariel.unimi.it/")
-            | Ariel 
-        | dei corsi A (Prof. Molinari), B (Prof. Raciti) e C (Prof. Zaccone).
-        br
-        | Molte risorse utili, compresi i testi dei temi d'esame degli anni passati, si trovano sul 
-        +link("http://wwwteor.mi.infn.it/~molinari/metodi2020.html")
-            | sito del Prof. Molinari
-        |.
-    p.b Le lezioni di tutorato si svolgeranno su Zoom in aula virtuale X il martedì ed il giovedì dalle 13.30 alle 14.15.
-    p
-        | Vi invito caldamente a provare a svolgere gli esercizi proposti PRIMA della lezione!
-        br
-        | Durante la lezione darò priorità allo svolgimento degli esercizi in cui avete trovato difficoltà.
-
-    p Potete contattarmi all'indirizzo 
-        +link("mailto:vittorio.erba@unimi.it")
-            | vittorio.erba [at] unimi [dot] it 
-        | per ogni dubbio o domanda sugli argomenti in programma.
+        link(rel='stylesheet', href='./src/style.css')
+        link(href='https://fonts.googleapis.com/css?family=Comfortaa&display=swap', rel='stylesheet')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css")
     
-    p.b I pdf delle lezioni sono disponibili 
-        +link("https://unimi2013-my.sharepoint.com/:f:/g/personal/vittorio_erba_unimi_it/EqOryIu7tZpMgaI8ywBvcSMBDUDfBvxbl8w0iRI_2jH5Ag?e=IgYTIs")
-            | qui
-        | .
-        | Per ottenere le registrazioni audio e video delle lezioni, contattatemi via 
-        +link("mailto:vittorio.erba@unimi.it")
-            | mail
-        | .
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(defer, type="text/javascript", src="src/index.js")
     
-    .flex.flex-wrap.justify-around
-        +float_box
-            +lecture_title Lezione 1: Mappe complesse e vettori tangenti
+    body
+        // div#nav
 
-            p Aula virtuale X, 05/05/2020 13:30-14:15
+        div.section#sec-home
 
-            p.b Esercizi proposti
+            div#sec-home-grid
 
-            p 
-                | Tema d'esame 19/07/2019, esercizio 3
-                br
-                | Tema d'esame 29/01/2019, esercizio 2
+                div#header
+                    div#name
+                        p#title Tutorato 
+                        p#subtitle Metodi Matematici per la Fisica 2019/20
+                    
+                    div#contacts
+                        div#icon-box
+                            a(href="mailto:vittorio.erba@unimi.it")
+                                i.fa.fa-2x.fa-envelope
+                            a(href="index.html")
+                                i.fa.fa-2x.fa-home
+                            // a(href="https://scholar.google.com/citations?user=mUgeZ3YAAAAJ&hl=it")
+                            //     i.ai.ai-2x.ai-google-scholar
+                            // a(href="https://arxiv.org/search/?searchtype=author&query=Erba%2C+Vittorio")
+                            //     i.ai.ai-2x.ai-arxiv
 
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EZkKPyF4tFtKrso3bHQCRkUBPuZtF5rB9Og_q4grzF43EA?e=lvwLIO")
-            //         | Video (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/EbfjeC-g5SNLssrq6VzWhNMB6_X4DczAIR-_97hHyAVmxQ?e=O4cyMv")
-            //         | Lavagna (pdf)
-                            
+                div#mid
+                    div#desc-teaching
+                        p
+                            | Tutte le informazioni ufficiali si trovano sui siti 
+                            a(href="https://ariel.unimi.it/")
+                                | Ariel
+                            |  dei corsi A (Prof. Molinari), B (Prof. Raciti) e C (Prof. Zaccone).
+                            br
+                            | Molte risorse utili, compresi i testi dei temi d'esame degli anni passati, si trovano sul 
+                            a(href="http://wwwteor.mi.infn.it/~molinari/metodi2020.html")
+                                | sito del Prof. Molinari
+                            |.
+                        p.b Le lezioni di tutorato si svolgeranno su Zoom in aula virtuale X il martedì ed il giovedì dalle 13.30 alle 14.15.
+                        p
+                            | Vi invito caldamente a provare a svolgere gli esercizi proposti PRIMA della lezione!
+                            br
+                            | Durante la lezione darò priorità allo svolgimento degli esercizi in cui avete trovato difficoltà.
 
-        +float_box
-            +lecture_title Lezione 2: Serie di potenze e serie di Laurent
+                        p Potete contattarmi all'indirizzo 
+                            a(href="mailto:vittorio.erba@unimi.it")
+                                | vittorio.erba [at] unimi [dot] it
+                            |  per ogni dubbio o domanda sugli argomenti in programma.
 
-            p Aula virtuale X, 07/05/2020 13:30-14:15
+                        p.b I pdf delle lezioni sono disponibili 
+                            a(href="https://unimi2013-my.sharepoint.com/:f:/g/personal/vittorio_erba_unimi_it/EqOryIu7tZpMgaI8ywBvcSMBDUDfBvxbl8w0iRI_2jH5Ag?e=IgYTIs")
+                                | qui
+                            | .
+                            | Per ottenere le registrazioni audio e video delle lezioni, contattatemi via 
+                            a(href="mailto:vittorio.erba@unimi.it")
+                                | mail
+                            | .
 
-            p.b Esercizi proposti
+                div#lists
+                    p.lecture-title.shaded Lezione 1
+                    div.lecture-desc
+                        p Aula virtuale X, 05/05/2020 13:30-14:15
+                        p 
+                            b Argomento: Mappe complesse e vettori tangenti
+                        p Esercizi proposti:
+                        ol
+                            li Tema d'esame 19/07/2019, esercizio 3
+                            li Tema d'esame 29/01/2019, esercizio 2
 
-            p 
-                | Tema d'esame 30/01/2020, esercizio 2
-                br
-                | Tema d'esame 23/09/2019, esercizio 2
-                br                
-                | Tema d'esame 10/09/2019, esercizio 2
-                br
-                | Tema d'esame 19/07/2018, esercizio 1
+                    p.lecture-title.shaded Lezione 2 
+                    div.lecture-desc
+                        p Aula virtuale X, 07/05/2020 13:30-14:15
+                        p 
+                            b Argomento: Serie di potenze e serie di Laurent
+                        p Esercizi proposti:
+                        ol
+                            li Tema d'esame 30/01/2020, esercizio 2
+                            li Tema d'esame 23/09/2019, esercizio 2
+                            li Tema d'esame 10/09/2019, esercizio 2
+                            li Tema d'esame 19/07/2018, esercizio 1
 
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/ET-VWlGK5kxLkOo30Ng7Cr0B6GIWllSRzrNJ2n24XRXLww?e=ft9f0d")
-            //         | Video (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/EYR9n9QsphZApPeo9yTVpM4BDxVHkY_d_ToRRqiKQhQPcQ?e=uVb0e6")
-            //         | Lavagna (pdf)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/EQQMzLIEf7dKjkadT9BP4t8B5OaoCSmkfqhnkPZkNbydiQ?e=j4sWCQ")
-            //         | Soluzioni esercizi non svolti (pdf)
-                        
-        +float_box
-            +lecture_title Lezione 3 & 4: Integrali con il metodo dei residui
+                    p.lecture-title.shaded Lezione 3 & 4
+                    div.lecture-desc
+                        p 
+                            | Aula virtuale X, 12/05/2020 13:30-14:15
+                            br
+                            | Aula virtuale X, 14/05/2020 13:30-14:15
+                        p 
+                            b Argomento: Integrali con il metodo dei residui
+                        p Esercizi proposti:
 
-            p 
-                | Aula virtuale X, 12/05/2020 13:30-14:15
-                br
-                | Aula virtuale X, 14/05/2020 13:30-14:15
+                        ol 
+                            li Tema d'esame 19/06/2019, esercizio 1
+                            li Tema d'esame 29/01/2019, esercizio 1
+                            li Tema d'esame 19/07/2018, esercizio 2
+                            li Tema d'esame 23/09/2019, esercizio 1
+                            li Tema d'esame 10/09/2019, esercizio 1
+                            li Tema d'esame 20/06/2018, esercizio 1
+                                
+                    p.lecture-title.shaded Lezione 5 & 6
+                    div.lecture-desc
+                        p 
+                            | Aula virtuale X, 19/05/2020 13:30-14:15
+                            br
+                            | Aula virtuale X, 21/05/2020 13:30-14:15
+                        p
+                            b Argomento: Spazi di Hilbert finito dimensionali  
+                        p Esercizi proposti:
 
-            p.b Esercizi proposti
+                        ol
+                            li Tema d'esame 23/09/2019, esercizio 3
+                            li Tema d'esame 19/06/2019, esercizio 2 
+                            li Tema d'esame 19/02/2019, esercizio 3
+                            li Tema d'esame 29/01/2019, esercizio 3
+                            li Tema d'esame 04/07/2018, esercizio 3 
+                            li Tema d'esame 26/09/2017, esercizio 4
 
-            p 
-                | Tema d'esame 19/06/2019, esercizio 1
-                br
-                | Tema d'esame 29/01/2019, esercizio 1
-                br
-                | Tema d'esame 19/07/2018, esercizio 2
-                br
-                | Tema d'esame 23/09/2019, esercizio 1
-                br
-                | Tema d'esame 10/09/2019, esercizio 1
-                br
-                | Tema d'esame 20/06/2018, esercizio 1
-                // br
-                // | Tema d'esame 19/07/2019, esercizio 1, lim inf di integrazione = -pi/2 
+                    p.lecture-title.shaded Lezione 7 & 8
+                    div.lecture-desc
+                        p 
+                            | Aula virtuale X, 26/05/2020 13:30-14:15
+                            br
+                            | Aula virtuale X, 28/05/2020 13:30-14:15
+                        p
+                            b Argomento: Spazi di Hilbert infinito dimensionali  
+                        p Esercizi proposti:
+                        ol
+                            li Tema d'esame 30/01/2020, esercizio 3
+                            li Tema d'esame 10/09/2019, esercizio 3
+                            li Tema d'esame 19/06/2019, esercizio 3
+                            li Tema d'esame 19/02/2019, esercizio 2
+                            li Tema d'esame 26/09/2018, esercizio 3
+                            li Tema d'esame 19/07/2018, esercizio 3
+                            li Tema d'esame 04/07/2018, esercizio 4
 
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EdwW0-0v90BMjJTgWp0HZC4B8g5hzwqy3iO6fRl58VXq0Q?e=CMsFmy")
-            //         | Video 12/05/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EUkZcLYcVaBMntT9y4QLnvoB5sncDMO50mpyKZW4B4npZA?e=rBh7na")
-            //         | Video 14/05/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/EagH8MOtx9hCmkhbIPlctdABy_3fFi1YI7f_L1bAg4V25A?e=fGN6tm")
-            //         | Lavagna 12/05/2020 + 14/05/2020 (pdf) <b> - aggiunte correzioni </b>
-        
-        +float_box
-            +lecture_title Lezione 5 & 6: Spazi di Hilbert finito dimensionali  
 
-            p 
-                | Aula virtuale X, 19/05/2020 13:30-14:15
-                br
-                | Aula virtuale X, 21/05/2020 13:30-14:15
+                    p.lecture-title.shaded Lezione 9 & 10
+                    div.lecture-desc
+                        p 
+                            | Aula virtuale X, 04/06/2020 13:30-14:15
+                            br
+                            | Aula virtuale X, 09/06/2020 13:30-14:15
 
-            p.b Esercizi proposti
+                        p
+                            b Argomento: Serie di Fourier
+                        p Esercizi proposti:
+                        ol
+                            li Tema d'esame 10/09/2019, esercizio 4
+                            li Tema d'esame 26/09/2018, esercizio 5b 
+                            li Tema d'esame 04/07/2018, esercizio 5b 
+                            li Tema d'esame 19/07/2019, esercizio 2
+                            li Tema d'esame 29/01/2018, esercizio 5b
+                            li Tema d'esame 27/06/2017, esercizio 3
 
-            p 
-                | Tema d'esame 23/09/2019, esercizio 3
-                br
-                | Tema d'esame 19/06/2019, esercizio 2 
-                br
-                | Tema d'esame 19/02/2019, esercizio 3
-                br
-                | Tema d'esame 29/01/2019, esercizio 3
-                br
-                | Tema d'esame 04/07/2018, esercizio 3 
-                br
-                | Tema d'esame 26/09/2017, esercizio 4
+                    p.lecture-title.shaded Lezione 11
+                    div.lecture-desc
+                        p Aula virtuale X, 11/06/2020 13:30-14:15
+                        p
+                            b Argomento: Trasformata di Fourier
+                        p Esercizi proposti:
+                        ol 
+                            li Tema d'esame 19/07/2018, esercizio 4 
+                            li Tema d'esame 19/02/2019, esercizio 4a
+                            li Tema d'esame 26/09/2018, esercizio 4
+                            li Tema d'esame 20/06/2018, esercizio 5b
 
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EfoZbBZDtPhAj12fcrEEFPAB5zOvwvKCXL-VCKhl25S8GQ?e=xCndUf")
-            //         | Video 19/05/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EUENp0fJCiZFqKEOuZaOqIUBg-5rJso3_uo2GbuWI2NrMA?e=Ylapps")
-            //         | Video 21/05/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/EUwhcxxx4xBDhA0M-AF9ZywBxLNhizjwFWm34L2uAGcDlQ?e=U25REg")
-            //         | Lavagna 19/05/2020 + 21/05/2020 (pdf)
-        
-        +float_box
-            +lecture_title Lezione 7 & 8: Spazi di Hilbert infinito dimensionali  
-
-            p 
-                | Aula virtuale X, 26/05/2020 13:30-14:15
-                br
-                | Aula virtuale X, 28/05/2020 13:30-14:15
-
-            p.b Esercizi proposti
-
-            p 
-                | Tema d'esame 30/01/2020, esercizio 3
-                br
-                | Tema d'esame 10/09/2019, esercizio 3
-                br
-                | Tema d'esame 19/06/2019, esercizio 3
-                br
-                | Tema d'esame 19/02/2019, esercizio 2
-                br
-                | Tema d'esame 26/09/2018, esercizio 3
-                br
-                | Tema d'esame 19/07/2018, esercizio 3
-                br
-                | Tema d'esame 04/07/2018, esercizio 4
-                // br
-                // | Tema d'esame 19/07/2019, esercizio 4 
-
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/ETaTg-YTpDFKqRrh7et6_1YBGKQ_8pP-3ZQJRGModA7NTw?e=J6Q1P4")
-            //         | Video 26/05/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EWlxRpUd3eVPt_TlraRz7EgB0d58NfjaxAm8Pthyw_QRbg?e=Mwt7vm")
-            //         | Video 28/05/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/EQrNys7qRLxAsg22G6CThPYBDrLnPlblolQ_4_swjaqDzg?e=HmgqGl")
-            //         | Lavagna 26/05/2020 + 28/05/2020 (pdf)
-        
-        +float_box
-            +lecture_title Lezione 9 & 10: Serie di Fourier  
-
-            p 
-                | Aula virtuale X, 04/06/2020 13:30-14:15
-                br
-                | Aula virtuale X, 09/06/2020 13:30-14:15
-
-            p.b Esercizi proposti
-
-            p 
-                | Tema d'esame 10/09/2019, esercizio 4
-                br
-                | Tema d'esame 26/09/2018, esercizio 5b 
-                br
-                | Tema d'esame 04/07/2018, esercizio 5b 
-                br
-                | Tema d'esame 19/07/2019, esercizio 2
-                br
-                | Tema d'esame 29/01/2018, esercizio 5b
-                br
-                | Tema d'esame 27/06/2017, esercizio 3
-
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EWqqVyethWJNodGCg3In0mQBH5cYtc-tjTFPJp_HeaQdFQ?e=j9aquG")
-            //         | Video 04/06/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/EYbJVARyeYlOkyoqnOdg8pUBHZHIspnJ6_LyAm0wgnwczQ?e=m1qeQk")
-            //         | Video 09/06/2020 (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/ESQiK0dfXwREjhzZ7AQFE3UBrzH0bNqjUBGINoPE8zMFFA?e=NJ5s6A")
-            //         | Lavagna 04/06/2020 + 09/06/2020 (pdf)
-        
-        +float_box
-            +lecture_title Lezione 11: Trasformata di Fourier 
-
-            p 
-                | Aula virtuale X, 11/06/2020 13:30-14:15
-
-            p.b Esercizi proposti
-
-            p 
-                | Tema d'esame 19/07/2018, esercizio 4 
-                br
-                | Tema d'esame 19/02/2019, esercizio 4a
-                br
-                | Tema d'esame 26/09/2018, esercizio 4
-                br
-                | Tema d'esame 20/06/2018, esercizio 5b
-
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/ERBR3JqrT79NuK6SEYokICAB4GnxKaeRntMKlLbSfON6zA?e=ih8myy")
-            //         | Video (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/EWrXY6fYfwdGvN8YIMxTjnkBMlw2nnHCKnE0RPdp90kaHQ?e=jlDbig")
-            //         | Lavagna (pdf)
-
-        +float_box
-            +lecture_title Lezione 12: Distribuzioni
-
-            p 
-                | Aula virtuale X, 16/06/2020 13:30-14:15
-
-            p.b Esercizi proposti
-
-            p
-                | Tema d'esame 04/07/2018, esercizio 5a 
-                br
-                | Tema d'esame 20/06/2018, esercizio 5a
-                br
-                | Tema d'esame 19/07/2019, esercizio 5
-                br
-                | Tema d'esame 19/07/2017, esercizio 3b
- 
-
-            // p.b Lezione
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:v:/g/personal/vittorio_erba_unimi_it/ES8Omz9V3qhNtGl-VLUoMu0BK2RM_zs1xAosn4Ox9R4_tQ?e=J26OhW")
-            //         | Video (mp4)
-            //     br
-            //     +link("https://unimi2013-my.sharepoint.com/:b:/g/personal/vittorio_erba_unimi_it/ERoXQ-_Nw6NAhayTZ4N5EgUBFnqIy423SYXa2Z1sqCD_aw?e=OBdLvm")
-            //         | Lavagna (pdf)
-
-        +float_clear
+                    p.lecture-title.shaded Lezione 12
+                    div.lecture-desc
+                        p Aula virtuale X, 16/06/2020 13:30-14:15
+                        p
+                            b Argomento: Distribuzioni
+                        ol
+                            li Tema d'esame 04/07/2018, esercizio 5a 
+                            li Tema d'esame 20/06/2018, esercizio 5a
+                            li Tema d'esame 19/07/2019, esercizio 5
+                            li Tema d'esame 19/07/2017, esercizio 3b

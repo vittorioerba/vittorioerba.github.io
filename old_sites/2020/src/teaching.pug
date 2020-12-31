@@ -1,0 +1,172 @@
+include _mixins.pug
+
++page_skeleton
+    .fl.w-100.pb4.tc
+        // +section_title
+        //     div
+        //         | Teaching
+        .pt3
+            .flex.flex-wrap.justify-around
+            
+                +float_box
+                    h1.f3.black.b
+                        | Teaching
+                    hr.mw5.bb.bw1.b--black-10
+                    table.f5.w-100.mw8.center(cellspacing='0')
+                        thead
+                            tr
+                                th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                        tbody.lh-copy
+                            +table_separator
+                            each item in tutoring
+                                tr
+                                    +table_line
+                                        .tc.tr-m.tr-l !{item.date}
+                                    if item.url
+                                        +table_line
+                                            .tc.tl-m.tl-l
+                                                +link(item.url) !{item.course}
+                                    else
+                                        +table_line 
+                                            .tc.tl-m.tl-l !{item.course}
+                                +table_separator
+
+                +float_box
+                    h1.f3.black.b
+                        | Student supervision
+                    hr.mw5.bb.bw1.b--black-10
+                    table.f5.w-100.mw8.center(cellspacing='0')
+                        thead
+                            tr
+                                th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                        tbody.lh-copy
+                            +table_separator
+                            each item in supervised
+                                tr
+                                    +table_line
+                                        .tc.tr-m.tr-l !{item.date}
+                                    +table_line 
+
+                                        .tc !{item.student}
+                                        if item.nowAt
+                                            if item.urlAt
+                                                +link(item.urlAt) !{item.nowAt}
+                                            else
+                                                | !{item.nowAt}
+
+                                    if item.url
+                                        +table_line
+                                            .tc.tl-m.tl-l
+                                                +link(item.url) !{item.type}
+                                    else
+                                        +table_line 
+                                            .tc.tl-m.tl-l !{item.type}
+
+                                +table_separator
+
+                    p.f5 Contact me if you would like to work with me on your thesis project!
+
+                // .tc.fl.w-100.center.bg-white.pv4.ph2.mw8
+
+                //     h1.f3.black.b
+                //         | Available thesis projects
+                //     hr.mw5.bb.bw1.b--black-10
+                //     p.center.mt3.f5
+                //         | Here you can find a list of available thesis projects. 
+                //         br
+                //         | It's not comprehensive: we may create a custom project (based on my 
+                //         +link("./research.html") research lines
+                //         | ) or modify the proposals below. 
+                //         br
+                //         | In any case, don't hesitate to 
+                //         +link("mailto:vittorio.erba@unimi.it") contact me!
+                //     table.f5.w-100.center(cellspacing='0')
+                //         thead
+                //             tr
+                //                 th.fw6.bb.b--black-20.tr.pb3.pr3.bg-white(colspan=4)
+                //         tbody.lh-copy
+                //             +table_separator
+                //             tr
+                //                 td.db.dtc-m.dtc-l.pv3.ph2.bb.b--black-20(colspan=4)
+                //                     .tc.f4
+                //                         b Variance in agent-based dynamics on graphs
+                //                     br
+                //                     .tl
+                //                         | Bachelor thesis (Tesi triennale) 
+                //                         br
+                //                         | Computational (
+                //                         +link("https://en.wikipedia.org/wiki/Agent-based_model") agent-based simulations on graphs
+                //                         |) 
+                //                         br
+                //                         | Theoretical (
+                //                         +link("https://en.wikipedia.org/wiki/Markov_chain") Markov chains
+                //                         |)
+                //                         br
+                //                         br
+                //                         | Agent-based simulations are widely used to model complex systems where the collective behaviour of the degrees of freedom is determined by the interaction of many simple individual units, called agents; for example, they are used to model epidemics.
+                //                         | These simulations are intrinsically stochastic, meaning that the temporal evolution of the system is not fully determined by its initial state. 
+                //                         | This raises a fundamental question: is the average temporal evolution of the system a good estimator for the behaviour of a single instance of the temporal evolution?
+                //                         | In other words: can I predict the future state of my system accurately if I know its average temporal evolution? Are the stochastic fluctuations too large to rule out the possibility of making reliable predictions?
+                //                         br
+                //                         br
+                //                         | The project will focus on understanding the current state of the art of variance estimates in Markovian agent-based models through literature reviews, computer-based simulations and simple Markov-chains computations.
+                //                         br
+                //                         br
+                //                         | Suggested readings:
+                //                         ul
+                //                             li 
+                //                                 +link("https://www.nature.com/articles/s41598-019-52351-x.pdf") "Hamiltonian dynamics of the SIS epidemic model with stochastic fluctuations"
+                //                                 | , Nakamura & Martinez (2019)
+                //                             li 
+                //                                 +link("http://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC2705976&blobtype=pdf") "On methods for studying stochastic disease dynamics"
+                //                                 | , Keeling & Ross (2008)
+                //                             li
+                //                                 +link("https://arxiv.org/pdf/1307.2001.pdf") "Variance in system dynamics and agent based modelling using the sir model of infectious disease"
+                //                                 | , Ahmed, Greensmith & Aickelin (2013)
+
+
+                            // tr
+                            //     td.db.dtc-m.dtc-l.pv3.ph2.bb.b--black-20(colspan=4)
+                            //         .tc.f4
+                            //             b The distribution of the optimal cost in the 1d Euclidean matching problem
+                            //         br
+                            //         .tl
+                            //             | Bachelor thesis (Tesi triennale) | Master thesis (Tesi magistrale) 
+                            //             br
+                            //             | Computational (
+                            //             +link("https://en.wikipedia.org/wiki/Matching_(graph_theory)") Sampling of the optimal solution of a random combinatorial optimization problem
+                            //             |) 
+                            //             br
+                            //             | Theoretical (
+                            //             +link("https://en.wikipedia.org/wiki/Feynman%E2%80%93Kac_formula") Path-integral methods for the computation of Brownian processes expectations
+                            //             |)
+                            //             br
+                            //             br
+                            //             | ...
+                            //             // | Random combinatorial optimization problems are optimization problems in which the input data is a random variable. 
+                            //             // | They are typically studied as models of glassy materials, in which the optimization of a cost function is seen as an energy minimization, and the random parameter of the problem are random couplings appearing in the energy.
+                            //             // | The matching problem has been one of the most studied toy models of glassy material as it's analytically tractable, and it can be solved by relatively fast algorithms. 
+                            //             // | Recently, the matching problem has been used to try to understand properties of glassy systems when Euclidean correlations in the random couplings appear.
+                            //             br
+                            //             br
+                            //             | The project will focus on the exact computation of the distribution of the optimal cost in the 1d Euclidean matching problem using the Feynman-Kac formalism.
+                            //             | Analytical predictions will be checked against numerical simulations.
+                            //             br
+                            //             br
+                            //             | Suggested readings:
+                            //             ul
+                            //                 li 
+                            //                     +link("https://www.worldscientific.com/doi/abs/10.1142/9789812772718_0006") "Brownian Functionals in Physics and Computer Science"
+                            //                     | , Majumdar (2006)
+                            //                 li
+                            //                     +link("https://arxiv.org/pdf/1707.05541.pdf") "Random Euclidean matching problems in one dimension"
+                            //                     | , Caracciolo, D'Achille & Sicuro (2017)
+
+
+
+
+                            +table_separator
+
+                
+            +float_clear
+
