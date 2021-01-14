@@ -296,6 +296,9 @@ a {
 /*     padding: 5px 0; */
 /* } */
 
+.list tr {
+    line-height: 30px;
+}
 
 .list td {
     vertical-align: top;
@@ -303,7 +306,7 @@ a {
 
 .right {
     margin: 0;
-    padding: 5px 0;
+    padding: 5px 0 0 15px;
 }
 
 .left {
@@ -340,10 +343,12 @@ a {
         margin-right: 60px;
     }
 
-    /* #lists label { */
-    /*     width: 33%; */
-    /*     margin: 15px 0; */
-    /* } */
+    #lists {
+        margin: 50px 10px;
+    }
+    #lists > div{
+        margin: 25px 0;
+    }
 
     #tab-contents > div {
         /* display:none; */
@@ -441,5 +446,6 @@ a {
     #photo {
         margin: 30px;
     }
+    
 
 }
