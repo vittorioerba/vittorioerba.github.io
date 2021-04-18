@@ -26,6 +26,10 @@ a {
   color: inherit; /* blue colors for links too */
 }
 
+b {
+  font-weight: bold;
+  }
+
 .shaded {
     position: relative;
     text-decoration: none;
