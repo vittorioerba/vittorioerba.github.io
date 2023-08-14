@@ -1,116 +1,27 @@
-/* Hacked together based on:
- * https://jgthms.com/web-design-in-4-minutes/ 
- * Taken from:
- * https://github.com/chr15m/minimal-stylesheet
- * Customized by:
- * vittorioerba.github.io
- */
-
- * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    color: #555;
-    margin: 0 auto;
-    max-width: 50em;
-    font-family: "Helvetica", "Arial", sans-serif;
-    line-height: 1.5;
-    padding: 2em 1em;
-  }
-  
-  h1 {
-    font-size: 2.5em
-  }
-  
-  h2 {
-    font-size: 2em;
-  }
-  
-  h3 {
-    font-size: 1.5em
-  }
-  
-  h2, h3 {
-    margin-top: 1.5em;
-  }
-  
-  h1, h2, strong {
-    color: #333;
-  }
-  
-  code, pre {
-    background: #eee;
-  }
-  
-  code {
-    padding: 2px 4px;
-    vertical-align: text-bottom;
-  }
-  
-  pre {
-    border-left: 2px solid #bbb;
-    padding: 1em;
-  }
-  
-  a {
-    color: #f56a6a;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  blockquote, q {
-    border-left: solid 4px #bbb;
-    font-style: italic;
-    margin: 0 0 2em 0;
-    padding: 0.5em 0 0.5em 2em;
-  }
-  
-  blockquote::before, blockquote::after, q::before, q::after {
-      content: '';
-      content: none;
-  }
-
-  p {
-    text-align: justify;
-  }
-
-.list {
-    width: 100%;
-    text-align: left;
+body {
+  color: #555;
+  max-width: 50em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 0em 2em;
 }
 
-.list tr {
-  width: 100%;
+  
+h1 {
+  font-size: 2em;
 }
 
-.list td {
-    vertical-align: top;
+p {
+  text-align: justify;
 }
 
-.right {
-    width: 100%;
-    margin: 0;
-    padding: 5px 0 0 15px;
+a {
+  color: #f56a6a;
+  text-decoration: none;
 }
 
-.left {
-    margin: 0;
-    min-width: 150px;
-    max-width: 150px;
-    white-space:nowrap;
-    text-align: right;    
-    padding: 5px 15px 5px 0;
-}
+a:hover {
+  text-decoration: underline;
+}  
+ 
 
-.center {
-  display: none;
-  margin: 0;
-  max-width: 150px;
-  white-space:nowrap;
-  text-align: center;    
-  padding: 5px 15px 5px 0;
-}
