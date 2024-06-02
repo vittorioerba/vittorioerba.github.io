@@ -67,4 +67,29 @@ hr::after {
   top: -0.8em;
 } */
 
- 
+input[type='checkbox'] { display: none; } 
+
+
+.lbl-toggle { 
+  cursor: pointer; 
+  color: #ce2121;
+  text-decoration: none;  
+} 
+
+.lbl-toggle:hover { 
+  text-decoration: underline;
+} 
+
+.collapsible-content { 
+  max-height: 0px; 
+  overflow: hidden; 
+} 
+
+.toggle:checked + .lbl-toggle + .collapsible-content { 
+  max-height: 100%; 
+} 
+
+.collapsible-content .content-inner { 
+  margin: .5rem 1rem; 
+  /* padding-bottom: 2rem; */
+} 
