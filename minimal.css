@@ -13,7 +13,7 @@ body {
 
   color: black;
 
-  max-width: 30em;
+  max-width: 40em;
 
   font-size: 14pt;
   line-height: 1.5em;
@@ -93,3 +93,7 @@ input[type='checkbox'] { display: none; }
   margin: .5rem 1rem; 
   /* padding-bottom: 2rem; */
 } 
+
+blockquote {
+  margin: 10px 30px;
+}
